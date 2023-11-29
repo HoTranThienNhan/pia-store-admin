@@ -1,18 +1,11 @@
-import {
-    ArrowDownOutlined,
-    ArrowUpOutlined,
-    DollarOutlined,
-    InboxOutlined,
-    SwapOutlined,
-} from '@ant-design/icons';
-import { Breadcrumb, Card, Col, DatePicker, Row, Tag, } from 'antd';
+import {  Image, Row, } from 'antd';
 import React, { useEffect, useRef, useState } from 'react';
 import { WrapperProductManagement } from './style';
 import { useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import * as OrderService from '../../../services/OrderService';
 import { getDayFromMongoDB, getMonthFromMongoDB, getYearFromMongoDB } from '../../../utils';
-import dayjs from 'dayjs';
+import imageHomepage from '../../../assets/images/admin-homepage.png';
 
 
 const DayStatsManagementComponent = () => {
@@ -186,12 +179,15 @@ const DayStatsManagementComponent = () => {
 
     return (
         <WrapperProductManagement>
-            <div style={{ padding: '200px 0px' }}>
+            <div style={{ padding: '100px 0px' }}>
                 <Row justify="center">
-                    <h1 style={{ fontWeight: 'bold' }}>TRANG CHỦ ADMIN</h1>
+                    <h1 style={{ fontWeight: 'bold' }}>Chào Mừng Bạn Đến Admin Dashboard</h1>
                 </Row>
                 <Row justify="center">
                     Pia Store Admin luôn đồng hành và hỗ trợ bạn trong suốt quá trình quản lý cửa hàng.
+                </Row>
+                <Row justify="center">
+                    <Image src={imageHomepage} preview={false} height={300} style={{ marginTop: '30px' }} />
                 </Row>
             </div>
         </WrapperProductManagement>

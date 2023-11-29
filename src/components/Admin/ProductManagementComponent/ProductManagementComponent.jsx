@@ -28,6 +28,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import SelectComponent from '../../SelectComponent/SelectComponent';
 
+
 const ProductManagementComponent = () => {
     /*** USE STATE ***/
     const user = useSelector((state) => state?.user);
